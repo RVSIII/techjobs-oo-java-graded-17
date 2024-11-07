@@ -16,7 +16,15 @@ public class Job {
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
+// from here
+    public Job() {
+        id = nextId;
+        nextId++;
+    }
 
+    public Job()
+
+// to here
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
