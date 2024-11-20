@@ -2,7 +2,10 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Employer {
+// old syntax: public class Employer {
+// new syntax:
+public class Employer extends JobField {
+
 
     private int id;
     private static int nextId = 1;
