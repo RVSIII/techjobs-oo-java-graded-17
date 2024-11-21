@@ -2,8 +2,8 @@ package org.launchcode.techjobs.oo;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static java.lang.System.lineSeparator;
+import static org.junit.Assert.*;
 
 public class JobTest {
     //TODO: Create your unit tests here
@@ -26,6 +26,12 @@ assertEquals("ACME", job3.getEmployer().getValue());
 assertEquals("Desert", job3.getLocation().getValue());
 assertEquals("Quality control", job3.getPositionType().getValue());
 assertEquals("Persistence", job3.getCoreCompetency().getValue());
+assertTrue(job3 instanceof Job);
+assertTrue(job3.getEmployer() instanceof Employer);
+assertTrue(job3 instanceof Job);
+assertTrue(job3 instanceof Job);
+assertTrue(job3 instanceof Job);
+
     }
 
     // Task 4, Test the Equals Method:
@@ -39,18 +45,19 @@ assertEquals("Persistence", job3.getCoreCompetency().getValue());
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        // instantiate job; extracted first line of string stored in variable
         Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-
+        assertTrue(job6.toString().startsWith(lineSeparator()));
+        assertTrue(job6.toString().endsWith(lineSeparator()));
     }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
-        // instantiate job; output of toString method
+      Job job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
     }
 
     @Test
     public void testToStringHandlesEmptyField() {
-
+        Job job8 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 }

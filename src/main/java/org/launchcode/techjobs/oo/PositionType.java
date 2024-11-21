@@ -27,7 +27,7 @@ public class PositionType {
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
 
-    // from here:
+
 
     @Override
     public boolean equals(Object o) {
@@ -41,7 +41,7 @@ public class PositionType {
     public int hashCode() {
         return Objects.hash(id, value);
     }
-    // to hear
+
 
     // Getters and Setters:
 
